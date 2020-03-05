@@ -1,0 +1,37 @@
+{
+  "mahasiswa": [
+    {
+      "NIM": 180823453,
+      "nama": "Mahasiswa 1",
+      "alamat": "Jl. Soekarno Hatta No. 9 Malang",
+      "hp": "081802023249",
+      "angkatan": 2018,
+      "status": "aktif"
+    },
+    {
+      "NIM": 140823453,
+      "nama": "Mahasiswa X",
+      "alamat": "Jl. Menur No. 9 Surabaya",
+      "hp": "081802023523",
+      "angkatan": 2014,
+      "status": "lulus"
+    },
+    {
+      "NIM": "1741720189",
+      "nama": "alif mohammad sultan",
+      "alamat": "jl.candi2/klaseman",
+      "hp": "083852704836",
+      "angkatan": "2017",
+      "status": "aktif"
+    },
+    {
+      "id": 1583408096804,
+      "NIM": "Arka arifiandi",
+      "nama": "1741720198",
+      "alamat": "jl.anggrek no 2",
+      "hp": "0891288121",
+      "angkatan": "2017",
+      "status": "aktif"
+    }
+  ]
+}
