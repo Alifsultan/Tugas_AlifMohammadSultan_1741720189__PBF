@@ -1,10 +1,11 @@
-import React, { useState, useContext, useCallback } from "react";
+import React, { useState, useContext } from "react";
 import {AuthContext} from "./index";
 import * as firebase from "firebase";
 import { GoogleLogin } from 'react-google-login';
 
 
-const Login = () => {
+const Login = (response) => {
+    console.log(response);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setErrors] = useState("");
@@ -14,7 +15,7 @@ const Login = () => {
     e.preventDefault();
     firebase
         .auth()
-        .createUserWithEmailAndPassword(email,password)
+        .signInWithEmailAndPassword(email,password)
         .then(res => {
             if (res.user) Auth.setLoggedIn(true);
         }) 
@@ -23,9 +24,9 @@ const Login = () => {
         });
     };
     
-const responseGoogle = (response) => {
-    console.log(response);
-}
+// const responseGoogle = (response) => {
+//     console.log(response);
+// }
     return (
         <div>
             <h1>Login</h1>
@@ -47,10 +48,10 @@ const responseGoogle = (response) => {
             <hr />
             
             <GoogleLogin
-                 clientId="681943056485-cc7d0i19mhg5eoliaa1lha336ie76dq8.apps.googleusercontent.com"
+                 clientId="611782820570-n6ndq8tbv5888r79j3jcurgk64qdld92.apps.googleusercontent.com"
                  buttonText="Login with google"
-                 onSuccess={responseGoogle}
-                 onFailure={responseGoogle}
+                 onSuccess={Login}
+                //  onFailure={responseGoogle}
                  cookiePolicy={'single_host_origin'}
             />
             <button type="submit">Login</button>

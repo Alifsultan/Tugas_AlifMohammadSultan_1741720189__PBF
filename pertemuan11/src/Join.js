@@ -1,4 +1,4 @@
-import React, { useState, useContext, useCallback } from "react";
+import React, { useState, useContext } from "react";
 import {AuthContext} from "./index";
 import * as firebase from "firebase";
 
@@ -24,7 +24,7 @@ const Join = () => {
 
     return (
         <div>
-            <h1>Login</h1>
+            <h1>Join</h1>
             <form onSubmit= {e => handleForm(e)}>
             <input
                 value={email}
@@ -41,13 +41,13 @@ const Join = () => {
                 placeholder="password"
             />
             <hr />
-            <button class="googleBtn" type="button">
+            {/* <button class="googleBtn" type="button">
                 <img
                     src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
                     alt="logo"
                 />
                 Login With Google
-            </button>
+            </button> */}
             <button type="submit">Login</button>
             <span>{error}</span>
             </form>
