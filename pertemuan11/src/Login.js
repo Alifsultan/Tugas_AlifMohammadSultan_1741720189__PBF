@@ -23,6 +23,16 @@ const Login = (response) => {
             setErrors(e.message);
         });
     };
+
+    const googleJoin = () => {
+        const provider = new firebase.auth.GoogleAuthProvider();
+        firebase
+          .auth()
+          .signInWithPopup(provider)
+          .then((res) => {
+            if (res.credential) Auth.setLoggedIn(true);
+          });
+      };
     
 // const responseGoogle = (response) => {
 //     console.log(response);
@@ -47,13 +57,21 @@ const Login = (response) => {
             />
             <hr />
             
-            <GoogleLogin
+            {/* <GoogleLogin
                  clientId="611782820570-n6ndq8tbv5888r79j3jcurgk64qdld92.apps.googleusercontent.com"
                  buttonText="Login with google"
                  onSuccess={Login}
                 //  onFailure={responseGoogle}
                  cookiePolicy={'single_host_origin'}
+            /> */}
+            <hr />
+            <button class="googleBtn" type="button" onClick ={()=> googleJoin()}>
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+                alt="logo"
             />
+            Login With Google
+            </button>
             <button type="submit">Login</button>
             <span>{error}</span>
             </form>
