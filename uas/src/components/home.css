@@ -1,0 +1,14 @@
+body{
+    background: url("../img/download1.jpg");
+    background-size:contain;
+    background-position:top;
+    background: cover;
+}
+nav{
+    background: url("../img/download4.jpg");
+    background-size:contain;
+    background-position:top;
+    background: cover;
+    text-decoration-color: blanchedalmond;
+    
+}
